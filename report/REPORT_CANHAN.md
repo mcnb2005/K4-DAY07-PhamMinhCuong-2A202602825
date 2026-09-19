@@ -1,6 +1,6 @@
 # Báo cáo cá nhân — Lab 7: Embedding & Vector Store
 
-**Họ tên / mã sinh viên:** [Người học điền]
+**Họ tên / mã sinh viên:** Phạm Minh Cương - 2A202602825
 
 **Nhóm:** [Người học điền]
 

@@ -1,6 +1,6 @@
 # Báo cáo nhóm — UIT + Thư viện Trung tâm + KTX ĐHQG-HCM
 
-**Nhóm / thành viên:** [Người học điền]
+**Nhóm / thành viên:** Phạm Minh Cương - 2A202602825
 
 **Ngày thực nghiệm:** 19/09/2026
 
