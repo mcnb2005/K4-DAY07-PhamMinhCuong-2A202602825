@@ -2,7 +2,7 @@
 
 **Họ tên / mã sinh viên:** Phạm Minh Cương - 2A202602825
 
-**Nhóm:** [Người học điền]
+**Nhóm:** C Sủi
 
 **Ngày thực nghiệm:** 19/09/2026
 
