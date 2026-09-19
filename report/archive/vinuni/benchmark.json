@@ -1,0 +1,1955 @@
+{
+  "python": "3.11.16",
+  "provider": "mock",
+  "backend": "mock embeddings fallback",
+  "llm": "extractive demo only; answer correctness not graded",
+  "chunk_size": 300,
+  "corpus": [
+    {
+      "id": "course-reserve",
+      "characters": 493,
+      "metadata": {
+        "doc_id": "course-reserve",
+        "title": "Đề nghị tài liệu dự trữ cho học phần",
+        "audience": "faculty",
+        "department": "library",
+        "category": "course-reserve",
+        "language": "vi",
+        "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+        "retrieved_at": "2026-09-19",
+        "document_version": "not-stated",
+        "content_type": "paraphrased-study-note",
+        "source": "F:/bai7/data/vinuni-library/course-reserve.md"
+      }
+    },
+    {
+      "id": "faculty-borrowing",
+      "characters": 432,
+      "metadata": {
+        "doc_id": "faculty-borrowing",
+        "title": "Mượn sách cho giảng viên VinUni",
+        "audience": "faculty",
+        "department": "library",
+        "category": "borrowing",
+        "language": "vi",
+        "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+        "retrieved_at": "2026-09-19",
+        "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+        "content_type": "paraphrased-study-note",
+        "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md"
+      }
+    },
+    {
+      "id": "hours-access",
+      "characters": 437,
+      "metadata": {
+        "doc_id": "hours-access",
+        "title": "Giờ hoạt động và khu học tập 24/7",
+        "audience": "all",
+        "department": "library",
+        "category": "opening-hours",
+        "language": "vi",
+        "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+        "retrieved_at": "2026-09-19",
+        "document_version": "not-stated",
+        "content_type": "paraphrased-study-note",
+        "source": "F:/bai7/data/vinuni-library/hours-access.md"
+      }
+    },
+    {
+      "id": "room-booking",
+      "characters": 456,
+      "metadata": {
+        "doc_id": "room-booking",
+        "title": "Đặt phòng học nhóm",
+        "audience": "all",
+        "department": "library",
+        "category": "study-space",
+        "language": "vi",
+        "source_url": "https://library.vinuni.edu.vn/room-booking/",
+        "retrieved_at": "2026-09-19",
+        "document_version": "not-stated",
+        "content_type": "paraphrased-study-note",
+        "source": "F:/bai7/data/vinuni-library/room-booking.md"
+      }
+    },
+    {
+      "id": "student-borrowing",
+      "characters": 390,
+      "metadata": {
+        "doc_id": "student-borrowing",
+        "title": "Mượn sách cho sinh viên đại học",
+        "audience": "student",
+        "department": "library",
+        "category": "borrowing",
+        "language": "vi",
+        "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+        "retrieved_at": "2026-09-19",
+        "document_version": "not-stated",
+        "content_type": "paraphrased-study-note",
+        "source": "F:/bai7/data/vinuni-library/student-borrowing.md"
+      }
+    }
+  ],
+  "baseline": {
+    "course-reserve": {
+      "fixed_size": {
+        "count": 3,
+        "avg_length": 197.66666666666666,
+        "chunks": [
+          "# Đề nghị tài liệu dự trữ cho học phần\n\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử.",
+          "gồm sách, ghi chú bài giảng và tài nguyên điện tử. Tài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi b",
+          "y.\n\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1."
+        ]
+      },
+      "by_sentences": {
+        "count": 2,
+        "avg_length": 245.5,
+        "chunks": [
+          "# Đề nghị tài liệu dự trữ cho học phần\n\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. Tài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.",
+          "## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1."
+        ]
+      },
+      "recursive": {
+        "count": 4,
+        "avg_length": 123.25,
+        "chunks": [
+          "# Đề nghị tài liệu dự trữ cho học phần\n\n## Mục đích\n\n",
+          "Giảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. ",
+          "Tài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n## Thời hạn gửi biểu mẫu\n\n",
+          "Giảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1."
+        ]
+      }
+    },
+    "faculty-borrowing": {
+      "fixed_size": {
+        "count": 3,
+        "avg_length": 177.33333333333334,
+        "chunks": [
+          "# Mượn sách cho giảng viên VinUni\n\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giản",
+          "áng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.\n\n## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài ",
+          "cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện."
+        ]
+      },
+      "by_sentences": {
+        "count": 2,
+        "avg_length": 215.0,
+        "chunks": [
+          "# Mượn sách cho giảng viên VinUni\n\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết. ## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng.",
+          "Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện."
+        ]
+      },
+      "recursive": {
+        "count": 3,
+        "avg_length": 144.0,
+        "chunks": [
+          "# Mượn sách cho giảng viên VinUni\n\n## Hạn mức và thời hạn\n\n",
+          "Bảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.\n\n## Giáo trình và thu hồi\n\n",
+          "Giảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện."
+        ]
+      }
+    },
+    "hours-access": {
+      "fixed_size": {
+        "count": 3,
+        "avg_length": 179.0,
+        "chunks": [
+          "# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không n",
+          "; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.\n\n## Không gian 24/7\n\nKhu học tập 24/7 luôn mở. Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và n",
+          "n, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động. Người dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ."
+        ]
+      },
+      "by_sentences": {
+        "count": 2,
+        "avg_length": 217.5,
+        "chunks": [
+          "# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này. ## Không gian 24/7\n\nKhu học tập 24/7 luôn mở.",
+          "Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động. Người dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ."
+        ]
+      },
+      "recursive": {
+        "count": 3,
+        "avg_length": 145.66666666666666,
+        "chunks": [
+          "# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\n",
+          "Trang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.\n\n## Không gian 24/7\n\n",
+          "Khu học tập 24/7 luôn mở. Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động. Người dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ."
+        ]
+      }
+    }
+  },
+  "strategies": {
+    "fixed_size": {
+      "chunk_count": 10,
+      "avg_length": 245.8,
+      "source_hits": 2,
+      "evidence_hits": 1,
+      "queries": [
+        {
+          "query_id": "Q1",
+          "question": "Tôi được mượn bao nhiêu tài liệu và trong bao lâu?",
+          "metadata_filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "student-borrowing#0",
+              "content": "# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác ",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": 0.12346087187901034
+            },
+            {
+              "id": "student-borrowing#1",
+              "content": "với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.04894755524397289
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": true,
+          "evidence_top3": true,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#0; audience: student; version: not-stated\n# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác \n\n[2] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#1; audience: student; version: not-stated\nvới điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2."
+        },
+        {
+          "query_id": "Q2",
+          "question": "Sinh viên đại học được gia hạn sách mấy lần, thêm bao lâu và cần điều kiện gì?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "hours-access#1",
+              "content": "Khu học tập 24/7 luôn mở. Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động. Người dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ.",
+              "metadata": {
+                "doc_id": "hours-access",
+                "title": "Giờ hoạt động và khu học tập 24/7",
+                "audience": "all",
+                "department": "library",
+                "category": "opening-hours",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/hours-access.md",
+                "chunk_index": 1
+              },
+              "score": 0.17505973371185352
+            },
+            {
+              "id": "course-reserve#1",
+              "content": "ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 1
+              },
+              "score": 0.09453838731539205
+            },
+            {
+              "id": "course-reserve#0",
+              "content": "# Đề nghị tài liệu dự trữ cho học phần\n\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. Tài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạ",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 0
+              },
+              "score": 0.07225902801018333
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/about-us/hours-and-access/; chunk: hours-access#1; audience: all; version: not-stated\nKhu học tập 24/7 luôn mở. Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động. Người dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ.\n\n[2] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#1; audience: faculty; version: not-stated\nở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.\n\n[3] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#0; audience: faculty; version: not-stated\n# Đề nghị tài liệu dự trữ cho học phần\n\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. Tài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạ"
+        },
+        {
+          "query_id": "Q3",
+          "question": "Nhóm đến muộn bao nhiêu phút thì bị hủy lượt đặt phòng?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "course-reserve#1",
+              "content": "ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 1
+              },
+              "score": 0.173633956027517
+            },
+            {
+              "id": "hours-access#0",
+              "content": "# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.\n\n## Không gian 24/7\n\nKhu học tập 24/7 luôn mở. Sau giờ đóng cửa thư việ",
+              "metadata": {
+                "doc_id": "hours-access",
+                "title": "Giờ hoạt động và khu học tập 24/7",
+                "audience": "all",
+                "department": "library",
+                "category": "opening-hours",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/hours-access.md",
+                "chunk_index": 0
+              },
+              "score": 0.16367528731081696
+            },
+            {
+              "id": "student-borrowing#1",
+              "content": "với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.14763618311748883
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#1; audience: faculty; version: not-stated\nở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.\n\n[2] source: https://library.vinuni.edu.vn/about-us/hours-and-access/; chunk: hours-access#0; audience: all; version: not-stated\n# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.\n\n## Không gian 24/7\n\nKhu học tập 24/7 luôn mở. Sau giờ đóng cửa thư việ\n\n[3] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#1; audience: student; version: not-stated\nvới điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2."
+        },
+        {
+          "query_id": "Q4",
+          "question": "Ai được vào khu học tập 24/7 sau khi thư viện đóng cửa?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "room-booking#0",
+              "content": "# Đặt phòng học nhóm\n\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n## Đặt trước và đến muộn\n\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuầ",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 0
+              },
+              "score": 0.24067097120514686
+            },
+            {
+              "id": "room-booking#1",
+              "content": " muộn\n\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuần qua lịch Microsoft Outlook. Phòng được phân theo thứ tự đặt. Nếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 1
+              },
+              "score": 0.19373983945558704
+            },
+            {
+              "id": "course-reserve#1",
+              "content": "ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 1
+              },
+              "score": 0.10533494945758329
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#0; audience: all; version: not-stated\n# Đặt phòng học nhóm\n\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n## Đặt trước và đến muộn\n\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuầ\n\n[2] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#1; audience: all; version: not-stated\n muộn\n\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuần qua lịch Microsoft Outlook. Phòng được phân theo thứ tự đặt. Nếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.\n\n[3] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#1; audience: faculty; version: not-stated\nở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1."
+        },
+        {
+          "query_id": "Q5",
+          "question": "Giảng viên phải gửi biểu mẫu Course Reserve trước khi học phần bắt đầu bao lâu?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "course-reserve#0",
+              "content": "# Đề nghị tài liệu dự trữ cho học phần\n\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. Tài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạ",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 0
+              },
+              "score": 0.13451275451981712
+            },
+            {
+              "id": "faculty-borrowing#1",
+              "content": "viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.07301217755565273
+            },
+            {
+              "id": "room-booking#0",
+              "content": "# Đặt phòng học nhóm\n\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n## Đặt trước và đến muộn\n\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuầ",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 0
+              },
+              "score": 0.05715904394236412
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#0; audience: faculty; version: not-stated\n# Đề nghị tài liệu dự trữ cho học phần\n\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. Tài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạ\n\n[2] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#1; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\nviên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.\n\n[3] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#0; audience: all; version: not-stated\n# Đặt phòng học nhóm\n\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n## Đặt trước và đến muộn\n\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuầ"
+        }
+      ],
+      "filter_ab": {
+        "query_id": "Q1",
+        "unfiltered": [
+          {
+            "id": "student-borrowing#0",
+            "content": "# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác ",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 0
+            },
+            "score": 0.12346087187901034
+          },
+          {
+            "id": "course-reserve#1",
+            "content": "ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.",
+            "metadata": {
+              "doc_id": "course-reserve",
+              "title": "Đề nghị tài liệu dự trữ cho học phần",
+              "audience": "faculty",
+              "department": "library",
+              "category": "course-reserve",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+              "chunk_index": 1
+            },
+            "score": 0.05914622126402115
+          },
+          {
+            "id": "student-borrowing#1",
+            "content": "với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 1
+            },
+            "score": 0.04894755524397289
+          }
+        ],
+        "unfiltered_evidence": true,
+        "filtered": [
+          {
+            "id": "student-borrowing#0",
+            "content": "# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác ",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 0
+            },
+            "score": 0.12346087187901034
+          },
+          {
+            "id": "student-borrowing#1",
+            "content": "với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 1
+            },
+            "score": 0.04894755524397289
+          }
+        ],
+        "filtered_evidence": true
+      }
+    },
+    "by_sentences": {
+      "chunk_count": 14,
+      "avg_length": 156.71428571428572,
+      "source_hits": 4,
+      "evidence_hits": 2,
+      "queries": [
+        {
+          "query_id": "Q1",
+          "question": "Tôi được mượn bao nhiêu tài liệu và trong bao lâu?",
+          "metadata_filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "student-borrowing#0",
+              "content": "# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": 0.013998349461623113
+            },
+            {
+              "id": "student-borrowing#1",
+              "content": "## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": -0.2154195071907609
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": true,
+          "evidence_top3": true,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#0; audience: student; version: not-stated\n# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n[2] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#1; audience: student; version: not-stated\n## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2."
+        },
+        {
+          "query_id": "Q2",
+          "question": "Sinh viên đại học được gia hạn sách mấy lần, thêm bao lâu và cần điều kiện gì?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "hours-access#1",
+              "content": "## Không gian 24/7\n\nKhu học tập 24/7 luôn mở. Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động.",
+              "metadata": {
+                "doc_id": "hours-access",
+                "title": "Giờ hoạt động và khu học tập 24/7",
+                "audience": "all",
+                "department": "library",
+                "category": "opening-hours",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/hours-access.md",
+                "chunk_index": 1
+              },
+              "score": 0.12959334904274478
+            },
+            {
+              "id": "room-booking#2",
+              "content": "Nếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 2
+              },
+              "score": 0.08478652348818465
+            },
+            {
+              "id": "faculty-borrowing#1",
+              "content": "## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.06806931586397039
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/about-us/hours-and-access/; chunk: hours-access#1; audience: all; version: not-stated\n## Không gian 24/7\n\nKhu học tập 24/7 luôn mở. Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động.\n\n[2] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#2; audience: all; version: not-stated\nNếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.\n\n[3] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#1; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\n## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu."
+        },
+        {
+          "query_id": "Q3",
+          "question": "Nhóm đến muộn bao nhiêu phút thì bị hủy lượt đặt phòng?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "faculty-borrowing#0",
+              "content": "# Mượn sách cho giảng viên VinUni\n\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": 0.14581055790516112
+            },
+            {
+              "id": "room-booking#2",
+              "content": "Nếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 2
+              },
+              "score": 0.08630413801391976
+            },
+            {
+              "id": "faculty-borrowing#1",
+              "content": "## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.08607787604791715
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": false,
+          "evidence_top3": true,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#0; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\n# Mượn sách cho giảng viên VinUni\n\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.\n\n[2] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#2; audience: all; version: not-stated\nNếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.\n\n[3] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#1; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\n## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu."
+        },
+        {
+          "query_id": "Q4",
+          "question": "Ai được vào khu học tập 24/7 sau khi thư viện đóng cửa?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "hours-access#0",
+              "content": "# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.",
+              "metadata": {
+                "doc_id": "hours-access",
+                "title": "Giờ hoạt động và khu học tập 24/7",
+                "audience": "all",
+                "department": "library",
+                "category": "opening-hours",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/hours-access.md",
+                "chunk_index": 0
+              },
+              "score": 0.23306342996262877
+            },
+            {
+              "id": "faculty-borrowing#2",
+              "content": "Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 2
+              },
+              "score": 0.18488851088086855
+            },
+            {
+              "id": "student-borrowing#1",
+              "content": "## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.026156710339986518
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/about-us/hours-and-access/; chunk: hours-access#0; audience: all; version: not-stated\n# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.\n\n[2] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#2; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\nYêu cầu kéo dài thời gian mượn được gửi đến thư viện.\n\n[3] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#1; audience: student; version: not-stated\n## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2."
+        },
+        {
+          "query_id": "Q5",
+          "question": "Giảng viên phải gửi biểu mẫu Course Reserve trước khi học phần bắt đầu bao lâu?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "faculty-borrowing#0",
+              "content": "# Mượn sách cho giảng viên VinUni\n\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": 0.21414357742071508
+            },
+            {
+              "id": "hours-access#2",
+              "content": "Người dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ.",
+              "metadata": {
+                "doc_id": "hours-access",
+                "title": "Giờ hoạt động và khu học tập 24/7",
+                "audience": "all",
+                "department": "library",
+                "category": "opening-hours",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/hours-access.md",
+                "chunk_index": 2
+              },
+              "score": 0.13452746926387563
+            },
+            {
+              "id": "course-reserve#2",
+              "content": "Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 2
+              },
+              "score": 0.09567904936266587
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#0; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\n# Mượn sách cho giảng viên VinUni\n\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.\n\n[2] source: https://library.vinuni.edu.vn/about-us/hours-and-access/; chunk: hours-access#2; audience: all; version: not-stated\nNgười dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ.\n\n[3] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#2; audience: faculty; version: not-stated\nCó thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1."
+        }
+      ],
+      "filter_ab": {
+        "query_id": "Q1",
+        "unfiltered": [
+          {
+            "id": "room-booking#2",
+            "content": "Nếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.",
+            "metadata": {
+              "doc_id": "room-booking",
+              "title": "Đặt phòng học nhóm",
+              "audience": "all",
+              "department": "library",
+              "category": "study-space",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/room-booking/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/room-booking.md",
+              "chunk_index": 2
+            },
+            "score": 0.21882373712074546
+          },
+          {
+            "id": "faculty-borrowing#1",
+            "content": "## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu.",
+            "metadata": {
+              "doc_id": "faculty-borrowing",
+              "title": "Mượn sách cho giảng viên VinUni",
+              "audience": "faculty",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+              "chunk_index": 1
+            },
+            "score": 0.17445342660219978
+          },
+          {
+            "id": "room-booking#1",
+            "content": "## Đặt trước và đến muộn\n\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuần qua lịch Microsoft Outlook. Phòng được phân theo thứ tự đặt.",
+            "metadata": {
+              "doc_id": "room-booking",
+              "title": "Đặt phòng học nhóm",
+              "audience": "all",
+              "department": "library",
+              "category": "study-space",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/room-booking/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/room-booking.md",
+              "chunk_index": 1
+            },
+            "score": 0.14652756349891619
+          }
+        ],
+        "unfiltered_evidence": false,
+        "filtered": [
+          {
+            "id": "student-borrowing#0",
+            "content": "# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 0
+            },
+            "score": 0.013998349461623113
+          },
+          {
+            "id": "student-borrowing#1",
+            "content": "## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 1
+            },
+            "score": -0.2154195071907609
+          }
+        ],
+        "filtered_evidence": true
+      }
+    },
+    "recursive": {
+      "chunk_count": 11,
+      "avg_length": 200.72727272727272,
+      "source_hits": 1,
+      "evidence_hits": 1,
+      "queries": [
+        {
+          "query_id": "Q1",
+          "question": "Tôi được mượn bao nhiêu tài liệu và trong bao lâu?",
+          "metadata_filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "student-borrowing#0",
+              "content": "# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n## Gia hạn sách\n\n",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": 0.06856081432000201
+            },
+            {
+              "id": "student-borrowing#1",
+              "content": "Sách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.04902669944413184
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": true,
+          "evidence_top3": true,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#0; audience: student; version: not-stated\n# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n## Gia hạn sách\n\n\n\n[2] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#1; audience: student; version: not-stated\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2."
+        },
+        {
+          "query_id": "Q2",
+          "question": "Sinh viên đại học được gia hạn sách mấy lần, thêm bao lâu và cần điều kiện gì?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "hours-access#1",
+              "content": "Khu học tập 24/7 luôn mở. Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động. Người dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ.",
+              "metadata": {
+                "doc_id": "hours-access",
+                "title": "Giờ hoạt động và khu học tập 24/7",
+                "audience": "all",
+                "department": "library",
+                "category": "opening-hours",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/hours-access.md",
+                "chunk_index": 1
+              },
+              "score": 0.17505973371185352
+            },
+            {
+              "id": "course-reserve#2",
+              "content": "Giảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 2
+              },
+              "score": 0.11270597789786435
+            },
+            {
+              "id": "room-booking#0",
+              "content": "# Đặt phòng học nhóm\n\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n## Đặt trước và đến muộn\n\n",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 0
+              },
+              "score": 0.10149348563422005
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/about-us/hours-and-access/; chunk: hours-access#1; audience: all; version: not-stated\nKhu học tập 24/7 luôn mở. Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động. Người dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ.\n\n[2] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#2; audience: faculty; version: not-stated\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.\n\n[3] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#0; audience: all; version: not-stated\n# Đặt phòng học nhóm\n\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n## Đặt trước và đến muộn\n\n"
+        },
+        {
+          "query_id": "Q3",
+          "question": "Nhóm đến muộn bao nhiêu phút thì bị hủy lượt đặt phòng?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "student-borrowing#0",
+              "content": "# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n## Gia hạn sách\n\n",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": 0.19821280144373288
+            },
+            {
+              "id": "faculty-borrowing#0",
+              "content": "# Mượn sách cho giảng viên VinUni\n\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.\n\n## Giáo trình và thu hồi\n\n",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": 0.1896058463798693
+            },
+            {
+              "id": "student-borrowing#1",
+              "content": "Sách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.13252220243004917
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#0; audience: student; version: not-stated\n# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n## Gia hạn sách\n\n\n\n[2] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#0; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\n# Mượn sách cho giảng viên VinUni\n\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.\n\n## Giáo trình và thu hồi\n\n\n\n[3] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#1; audience: student; version: not-stated\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2."
+        },
+        {
+          "query_id": "Q4",
+          "question": "Ai được vào khu học tập 24/7 sau khi thư viện đóng cửa?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "room-booking#0",
+              "content": "# Đặt phòng học nhóm\n\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n## Đặt trước và đến muộn\n\n",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 0
+              },
+              "score": 0.15695310921840497
+            },
+            {
+              "id": "faculty-borrowing#1",
+              "content": "Giảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.0058576380317277256
+            },
+            {
+              "id": "room-booking#1",
+              "content": "Có thể đặt trong ngày hoặc sớm tối đa 1 tuần qua lịch Microsoft Outlook. Phòng được phân theo thứ tự đặt. Nếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 1
+              },
+              "score": -0.0005776116779828873
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#0; audience: all; version: not-stated\n# Đặt phòng học nhóm\n\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n## Đặt trước và đến muộn\n\n\n\n[2] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#1; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.\n\n[3] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#1; audience: all; version: not-stated\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuần qua lịch Microsoft Outlook. Phòng được phân theo thứ tự đặt. Nếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác."
+        },
+        {
+          "query_id": "Q5",
+          "question": "Giảng viên phải gửi biểu mẫu Course Reserve trước khi học phần bắt đầu bao lâu?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "student-borrowing#1",
+              "content": "Sách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.17455021299850046
+            },
+            {
+              "id": "hours-access#0",
+              "content": "# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.\n\n## Không gian 24/7\n\n",
+              "metadata": {
+                "doc_id": "hours-access",
+                "title": "Giờ hoạt động và khu học tập 24/7",
+                "audience": "all",
+                "department": "library",
+                "category": "opening-hours",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/hours-access.md",
+                "chunk_index": 0
+              },
+              "score": 0.16521563820066257
+            },
+            {
+              "id": "faculty-borrowing#1",
+              "content": "Giảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.11181626284937296
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#1; audience: student; version: not-stated\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.\n\n[2] source: https://library.vinuni.edu.vn/about-us/hours-and-access/; chunk: hours-access#0; audience: all; version: not-stated\n# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.\n\n## Không gian 24/7\n\n\n\n[3] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#1; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện."
+        }
+      ],
+      "filter_ab": {
+        "query_id": "Q1",
+        "unfiltered": [
+          {
+            "id": "course-reserve#2",
+            "content": "Giảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.",
+            "metadata": {
+              "doc_id": "course-reserve",
+              "title": "Đề nghị tài liệu dự trữ cho học phần",
+              "audience": "faculty",
+              "department": "library",
+              "category": "course-reserve",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+              "chunk_index": 2
+            },
+            "score": 0.3612394482101083
+          },
+          {
+            "id": "hours-access#0",
+            "content": "# Giờ hoạt động và khu học tập 24/7\n\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.\n\n## Không gian 24/7\n\n",
+            "metadata": {
+              "doc_id": "hours-access",
+              "title": "Giờ hoạt động và khu học tập 24/7",
+              "audience": "all",
+              "department": "library",
+              "category": "opening-hours",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/hours-access.md",
+              "chunk_index": 0
+            },
+            "score": 0.11104785251206492
+          },
+          {
+            "id": "room-booking#0",
+            "content": "# Đặt phòng học nhóm\n\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n## Đặt trước và đến muộn\n\n",
+            "metadata": {
+              "doc_id": "room-booking",
+              "title": "Đặt phòng học nhóm",
+              "audience": "all",
+              "department": "library",
+              "category": "study-space",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/room-booking/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/room-booking.md",
+              "chunk_index": 0
+            },
+            "score": 0.09276073231052784
+          }
+        ],
+        "unfiltered_evidence": false,
+        "filtered": [
+          {
+            "id": "student-borrowing#0",
+            "content": "# Mượn sách cho sinh viên đại học\n\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n## Gia hạn sách\n\n",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 0
+            },
+            "score": 0.06856081432000201
+          },
+          {
+            "id": "student-borrowing#1",
+            "content": "Sách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 1
+            },
+            "score": 0.04902669944413184
+          }
+        ],
+        "filtered_evidence": true
+      }
+    },
+    "heading": {
+      "chunk_count": 11,
+      "avg_length": 219.0,
+      "source_hits": 3,
+      "evidence_hits": 2,
+      "queries": [
+        {
+          "query_id": "Q1",
+          "question": "Tôi được mượn bao nhiêu tài liệu và trong bao lâu?",
+          "metadata_filter": {
+            "audience": "student"
+          },
+          "results": [
+            {
+              "id": "student-borrowing#0",
+              "content": "# Mượn sách cho sinh viên đại học\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": -0.12369471963761332
+            },
+            {
+              "id": "student-borrowing#1",
+              "content": "# Mượn sách cho sinh viên đại học\n## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+              "metadata": {
+                "doc_id": "student-borrowing",
+                "title": "Mượn sách cho sinh viên đại học",
+                "audience": "student",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": -0.19595379310211772
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": true,
+          "evidence_top3": true,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#0; audience: student; version: not-stated\n# Mượn sách cho sinh viên đại học\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.\n\n[2] source: https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/; chunk: student-borrowing#1; audience: student; version: not-stated\n# Mượn sách cho sinh viên đại học\n## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2."
+        },
+        {
+          "query_id": "Q2",
+          "question": "Sinh viên đại học được gia hạn sách mấy lần, thêm bao lâu và cần điều kiện gì?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "faculty-borrowing#1",
+              "content": "# Mượn sách cho giảng viên VinUni\n## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.1298899001200557
+            },
+            {
+              "id": "faculty-borrowing#0",
+              "content": "# Mượn sách cho giảng viên VinUni\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": 0.126071947083156
+            },
+            {
+              "id": "course-reserve#0",
+              "content": "# Đề nghị tài liệu dự trữ cho học phần\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. ",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 0
+              },
+              "score": 0.07962617511990676
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#1; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\n# Mượn sách cho giảng viên VinUni\n## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.\n\n[2] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#0; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\n# Mượn sách cho giảng viên VinUni\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.\n\n[3] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#0; audience: faculty; version: not-stated\n# Đề nghị tài liệu dự trữ cho học phần\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. "
+        },
+        {
+          "query_id": "Q3",
+          "question": "Nhóm đến muộn bao nhiêu phút thì bị hủy lượt đặt phòng?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "faculty-borrowing#0",
+              "content": "# Mượn sách cho giảng viên VinUni\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 0
+              },
+              "score": 0.11404075352005996
+            },
+            {
+              "id": "course-reserve#1",
+              "content": "# Đề nghị tài liệu dự trữ cho học phần\n## Mục đích\n\nTài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 1
+              },
+              "score": 0.07444880350391893
+            },
+            {
+              "id": "course-reserve#0",
+              "content": "# Đề nghị tài liệu dự trữ cho học phần\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. ",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 0
+              },
+              "score": 0.06573145976415161
+            }
+          ],
+          "source_hit": false,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#0; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\n# Mượn sách cho giảng viên VinUni\n## Hạn mức và thời hạn\n\nBảng quyền mượn trong chính sách V4.0 ghi giảng viên VinUni được mượn 5 tài liệu trong 6 tháng và gia hạn 1 lần. Quyền này khác với nhóm giảng viên liên kết.\n\n[2] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#1; audience: faculty; version: not-stated\n# Đề nghị tài liệu dự trữ cho học phần\n## Mục đích\n\nTài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.\n\n[3] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#0; audience: faculty; version: not-stated\n# Đề nghị tài liệu dự trữ cho học phần\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. "
+        },
+        {
+          "query_id": "Q4",
+          "question": "Ai được vào khu học tập 24/7 sau khi thư viện đóng cửa?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "room-booking#0",
+              "content": "# Đặt phòng học nhóm\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 0
+              },
+              "score": 0.15865074651195932
+            },
+            {
+              "id": "room-booking#1",
+              "content": "# Đặt phòng học nhóm\n## Đặt trước và đến muộn\n\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuần qua lịch Microsoft Outlook. Phòng được phân theo thứ tự đặt. Nếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.",
+              "metadata": {
+                "doc_id": "room-booking",
+                "title": "Đặt phòng học nhóm",
+                "audience": "all",
+                "department": "library",
+                "category": "study-space",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/room-booking/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/room-booking.md",
+                "chunk_index": 1
+              },
+              "score": 0.147630458674174
+            },
+            {
+              "id": "hours-access#0",
+              "content": "# Giờ hoạt động và khu học tập 24/7\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này.",
+              "metadata": {
+                "doc_id": "hours-access",
+                "title": "Giờ hoạt động và khu học tập 24/7",
+                "audience": "all",
+                "department": "library",
+                "category": "opening-hours",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/hours-access.md",
+                "chunk_index": 0
+              },
+              "score": 0.1074909046071191
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": false,
+          "evidence_top3": false,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#0; audience: all; version: not-stated\n# Đặt phòng học nhóm\n## Điều kiện và giới hạn\n\nSinh viên, giảng viên và nhân viên có thể đặt phòng cho nhóm từ 2 người. Mỗi nhóm được đặt tối đa 2 giờ mỗi phiên, 2 phiên mỗi ngày và 4 phiên mỗi tuần, tính chung tất cả các phòng.\n\n[2] source: https://library.vinuni.edu.vn/room-booking/; chunk: room-booking#1; audience: all; version: not-stated\n# Đặt phòng học nhóm\n## Đặt trước và đến muộn\n\nCó thể đặt trong ngày hoặc sớm tối đa 1 tuần qua lịch Microsoft Outlook. Phòng được phân theo thứ tự đặt. Nếu nhóm không xuất hiện trong 10 phút đầu, lượt đặt sẽ bị hủy để nhường phòng cho nhóm khác.\n\n[3] source: https://library.vinuni.edu.vn/about-us/hours-and-access/; chunk: hours-access#0; audience: all; version: not-stated\n# Giờ hoạt động và khu học tập 24/7\n## Lịch từ tháng Chín trên trang Hours and access\n\nTrang này ghi từ tháng Chín: thứ Hai đến thứ Sáu mở 8:45–21:00; thứ Bảy và Chủ nhật mở 9:00–17:00. Trang không nêu năm áp dụng của lịch này."
+        },
+        {
+          "query_id": "Q5",
+          "question": "Giảng viên phải gửi biểu mẫu Course Reserve trước khi học phần bắt đầu bao lâu?",
+          "metadata_filter": null,
+          "results": [
+            {
+              "id": "faculty-borrowing#1",
+              "content": "# Mượn sách cho giảng viên VinUni\n## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.",
+              "metadata": {
+                "doc_id": "faculty-borrowing",
+                "title": "Mượn sách cho giảng viên VinUni",
+                "audience": "faculty",
+                "department": "library",
+                "category": "borrowing",
+                "language": "vi",
+                "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+                "chunk_index": 1
+              },
+              "score": 0.15884514744439804
+            },
+            {
+              "id": "course-reserve#2",
+              "content": "# Đề nghị tài liệu dự trữ cho học phần\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 2
+              },
+              "score": 0.11367019621822852
+            },
+            {
+              "id": "course-reserve#1",
+              "content": "# Đề nghị tài liệu dự trữ cho học phần\n## Mục đích\n\nTài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạy.",
+              "metadata": {
+                "doc_id": "course-reserve",
+                "title": "Đề nghị tài liệu dự trữ cho học phần",
+                "audience": "faculty",
+                "department": "library",
+                "category": "course-reserve",
+                "language": "vi",
+                "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+                "retrieved_at": "2026-09-19",
+                "document_version": "not-stated",
+                "content_type": "paraphrased-study-note",
+                "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+                "chunk_index": 1
+              },
+              "score": 0.07090748142416152
+            }
+          ],
+          "source_hit": true,
+          "evidence_top1": false,
+          "evidence_top3": true,
+          "agent_answer": "[DEMO: trích ngữ cảnh, chưa có LLM sinh câu trả lời]\n[1] source: https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/; chunk: faculty-borrowing#1; audience: faculty; version: POL-LLR-001-V4.0 (2025-07-09)\n# Mượn sách cho giảng viên VinUni\n## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.\n\n[2] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#2; audience: faculty; version: not-stated\n# Đề nghị tài liệu dự trữ cho học phần\n## Thời hạn gửi biểu mẫu\n\nGiảng viên cần gửi biểu mẫu Course Reserve cho thư viện ít nhất 8 tuần trước khi học phần bắt đầu. Có thể lấy biểu mẫu trên website hoặc tại quầy lưu thông tầng 1.\n\n[3] source: https://library.vinuni.edu.vn/course-reserve/; chunk: course-reserve#1; audience: faculty; version: not-stated\n# Đề nghị tài liệu dự trữ cho học phần\n## Mục đích\n\nTài liệu bản in được đặt trong bộ sưu tập dự trữ ở tầng 1 theo yêu cầu của người phụ trách giảng dạy."
+        }
+      ],
+      "filter_ab": {
+        "query_id": "Q1",
+        "unfiltered": [
+          {
+            "id": "faculty-borrowing#1",
+            "content": "# Mượn sách cho giảng viên VinUni\n## Giáo trình và thu hồi\n\nGiảng viên mượn giáo trình phục vụ giảng dạy có thể yêu cầu thời hạn 6 tháng. Thư viện có thể thu hồi tài liệu khi người khác yêu cầu. Yêu cầu kéo dài thời gian mượn được gửi đến thư viện.",
+            "metadata": {
+              "doc_id": "faculty-borrowing",
+              "title": "Mượn sách cho giảng viên VinUni",
+              "audience": "faculty",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://policy.vinuni.edu.vn/all-policies/library-policies-for-users/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "POL-LLR-001-V4.0 (2025-07-09)",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/faculty-borrowing.md",
+              "chunk_index": 1
+            },
+            "score": 0.3548704504254619
+          },
+          {
+            "id": "course-reserve#0",
+            "content": "# Đề nghị tài liệu dự trữ cho học phần\n## Mục đích\n\nGiảng viên sử dụng dịch vụ Course Reserve để cung cấp tài liệu đọc cho học phần. Tài liệu có thể gồm sách, ghi chú bài giảng và tài nguyên điện tử. ",
+            "metadata": {
+              "doc_id": "course-reserve",
+              "title": "Đề nghị tài liệu dự trữ cho học phần",
+              "audience": "faculty",
+              "department": "library",
+              "category": "course-reserve",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/course-reserve/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/course-reserve.md",
+              "chunk_index": 0
+            },
+            "score": 0.25479430475228876
+          },
+          {
+            "id": "hours-access#1",
+            "content": "# Giờ hoạt động và khu học tập 24/7\n## Không gian 24/7\n\nKhu học tập 24/7 luôn mở. Sau giờ đóng cửa thư viện, khu này chỉ dành cho sinh viên, giảng viên và nhân viên VinUni đang hoạt động. Người dùng truy cập thư viện bằng thẻ VinUni ID hợp lệ.",
+            "metadata": {
+              "doc_id": "hours-access",
+              "title": "Giờ hoạt động và khu học tập 24/7",
+              "audience": "all",
+              "department": "library",
+              "category": "opening-hours",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/about-us/hours-and-access/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/hours-access.md",
+              "chunk_index": 1
+            },
+            "score": 0.14493508599264873
+          }
+        ],
+        "unfiltered_evidence": false,
+        "filtered": [
+          {
+            "id": "student-borrowing#0",
+            "content": "# Mượn sách cho sinh viên đại học\n## Hạn mức và thời hạn\n\nSinh viên bậc đại học được mượn tối đa 3 tài liệu, thời hạn 2 tuần cho mỗi tài liệu. Thẻ VinUni ID được dùng để mượn sách và thiết bị.",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 0
+            },
+            "score": -0.12369471963761332
+          },
+          {
+            "id": "student-borrowing#1",
+            "content": "# Mượn sách cho sinh viên đại học\n## Gia hạn sách\n\nSách được gia hạn 1 lần, thêm 1 tuần, với điều kiện chưa quá hạn và không có người khác yêu cầu mượn. Có thể gia hạn trên website thư viện hoặc máy tự phục vụ ở tầng 1 và tầng 2.",
+            "metadata": {
+              "doc_id": "student-borrowing",
+              "title": "Mượn sách cho sinh viên đại học",
+              "audience": "student",
+              "department": "library",
+              "category": "borrowing",
+              "language": "vi",
+              "source_url": "https://library.vinuni.edu.vn/services/borrow-and-request/undergraduate-and-staff/",
+              "retrieved_at": "2026-09-19",
+              "document_version": "not-stated",
+              "content_type": "paraphrased-study-note",
+              "source": "F:/bai7/data/vinuni-library/student-borrowing.md",
+              "chunk_index": 1
+            },
+            "score": -0.19595379310211772
+          }
+        ],
+        "filtered_evidence": true
+      }
+    }
+  },
+  "similarity": [
+    {
+      "a": "Sinh viên mượn sách tại thư viện.",
+      "b": "Sinh viên mượn sách tại thư viện.",
+      "prediction": "cao nhất: cùng một câu",
+      "score": 1.0
+    },
+    {
+      "a": "Sinh viên mượn sách tại thư viện.",
+      "b": "Người học có thể mượn tài liệu ở thư viện.",
+      "prediction": "cao về ngữ nghĩa",
+      "score": -0.07498448307665445
+    },
+    {
+      "a": "Nhóm cần đặt phòng để cùng học bài.",
+      "b": "Các bạn đăng ký phòng học nhóm.",
+      "prediction": "cao về ngữ nghĩa",
+      "score": 0.20280027683241403
+    },
+    {
+      "a": "Sinh viên phải gia hạn sách trước hạn trả.",
+      "b": "Thư viện cung cấp máy in và máy quét.",
+      "prediction": "trung bình: cùng chủ đề, khác dịch vụ",
+      "score": -0.07388065598515933
+    },
+    {
+      "a": "Thư viện cho mượn sách.",
+      "b": "Núi lửa phun trào tạo ra dung nham.",
+      "prediction": "thấp nhất về ngữ nghĩa",
+      "score": -0.1248810860357083
+    }
+  ]
+}

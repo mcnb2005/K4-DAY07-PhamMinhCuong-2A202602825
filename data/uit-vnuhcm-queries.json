@@ -1,0 +1,48 @@
+[
+  {
+    "id": "Q1",
+    "question": "Ở UIT, tôi cần làm gì để yêu cầu phúc khảo và nhận kết quả bằng cách nào?",
+    "user_context": "Người hỏi là sinh viên; cần tránh quy trình chấm bài của giảng viên.",
+    "metadata_filter": {"audience": "student"},
+    "gold_doc_id": "uit-phuc-khao-sinh-vien",
+    "gold_section": "Gửi yêu cầu; Lệ phí và kết quả",
+    "gold_answer": "Sau khi có điểm, gửi yêu cầu tại https://daa.uit.edu.vn/sinhvien/dkphuckhao, nộp lệ phí; kết quả được thông báo qua email.",
+    "evidence_phrases": ["https://daa.uit.edu.vn/sinhvien/dkphuckhao", "nộp lệ phí", "qua email"]
+  },
+  {
+    "id": "Q2",
+    "question": "Hạn đóng học phí học kỳ hè 2025-2026 của UIT là ngày nào?",
+    "metadata_filter": null,
+    "gold_doc_id": "uit-hoc-phi-he-2025-2026",
+    "gold_section": "Tra cứu và thời hạn nộp",
+    "gold_answer": "Hạn cuối là ngày 16/08/2026, áp dụng riêng học kỳ hè năm học 2025-2026.",
+    "evidence_phrases": ["kết thúc ngày 16/08/2026"]
+  },
+  {
+    "id": "Q3",
+    "question": "Theo quy định UIT Global có hiệu lực từ 01/09/2026, sinh viên được nộp chứng chỉ xét học bổng trong những học kỳ nào?",
+    "metadata_filter": null,
+    "gold_doc_id": "uit-hoc-bong-global-2026",
+    "gold_section": "Thời điểm nộp chứng chỉ",
+    "gold_answer": "Trong 6 học kỳ đầu; hạn mỗi học kỳ là 30 ngày từ khi học kỳ kết thúc. Từ học kỳ 7 không còn được xét.",
+    "evidence_phrases": ["6 học kỳ đầu", "30 ngày", "Từ học kỳ 7"]
+  },
+  {
+    "id": "Q4",
+    "question": "Sinh viên chính quy thuộc ĐHQG-HCM được mượn bao nhiêu tài liệu tại Thư viện Trung tâm, trong bao lâu và gia hạn thế nào?",
+    "metadata_filter": null,
+    "gold_doc_id": "vnulib-muon-tra",
+    "gold_section": "Nhóm chính quy thuộc ĐHQG-HCM",
+    "gold_answer": "Mượn 5 tài liệu trong 21 ngày; được gia hạn 1 lần thêm 21 ngày.",
+    "evidence_phrases": ["5 tài liệu trong 21 ngày", "gia hạn 1 lần thêm 21 ngày"]
+  },
+  {
+    "id": "Q5",
+    "question": "Sinh viên đang ở KTX ĐHQG-HCM gia hạn năm 2026-2027 phải thanh toán trong bao lâu sau khi hồ sơ được duyệt?",
+    "metadata_filter": null,
+    "gold_doc_id": "ktx-gia-han-2026-2027",
+    "gold_section": "Điều kiện hoàn tất",
+    "gold_answer": "Trong vòng 7 ngày kể từ khi hồ sơ gia hạn được duyệt; quá hạn có thể bị hủy kết quả.",
+    "evidence_phrases": ["7 ngày kể từ khi hồ sơ được duyệt"]
+  }
+]

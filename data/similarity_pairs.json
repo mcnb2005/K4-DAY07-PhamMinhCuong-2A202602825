@@ -1,0 +1,7 @@
+[
+  {"a": "Sinh viên mượn sách tại thư viện.", "b": "Sinh viên mượn sách tại thư viện.", "prediction": "cao nhất: cùng một câu"},
+  {"a": "Sinh viên mượn sách tại thư viện.", "b": "Người học có thể mượn tài liệu ở thư viện.", "prediction": "cao về ngữ nghĩa"},
+  {"a": "Nhóm cần đặt phòng để cùng học bài.", "b": "Các bạn đăng ký phòng học nhóm.", "prediction": "cao về ngữ nghĩa"},
+  {"a": "Sinh viên phải gia hạn sách trước hạn trả.", "b": "Thư viện cung cấp máy in và máy quét.", "prediction": "trung bình: cùng chủ đề, khác dịch vụ"},
+  {"a": "Thư viện cho mượn sách.", "b": "Núi lửa phun trào tạo ra dung nham.", "prediction": "thấp nhất về ngữ nghĩa"}
+]

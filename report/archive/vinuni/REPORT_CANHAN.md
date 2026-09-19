@@ -54,7 +54,7 @@ Lọc metadata **trước** top-k, khớp tất cả trường. Lọc sau có th
 
 Lấy top-k, đánh số nguồn [1], [2]... rồi tạo prompt chứa nội dung, URL, chunk ID, audience và phiên bản. Prompt yêu cầu dựa vào bằng chứng, trích dẫn và báo thiếu thông tin. Nếu không có kết quả, không gọi LLM. Giữ nguyên answer() và thêm answer_with_filter() cho bài L3A.
 
-Chi tiết code, luồng xử lý và cách chạy ở [GIAI_THICH.md](../GIAI_THICH.md).
+Chi tiết code, luồng xử lý và cách chạy ở [GIAI_THICH.md](../../../GIAI_THICH.md).
 
 ## 3. Kết quả kiểm thử
 
@@ -67,17 +67,16 @@ Windows, **Python 3.11.16**, **pytest 9.1.1**. Lệnh đã chạy:
 Tóm lược output thực tế:
 
 ```text
-collected 77 items
-tests/test_benchmark_datasets.py ... PASSED
+collected 69 items
 tests/test_edge_cases.py ... PASSED
 tests/test_solution.py ... PASSED
-77 passed in 0.34s
+69 passed in 0.36s
 ```
 
 - **42/42 kiểm thử gốc đạt**; giữ nguyên tests/test_solution.py.
-- **35 kiểm thử bổ sung đạt**: dấu câu, chia không mất ký tự, giới hạn kích thước, lọc trước top-k, xóa nhiều chunk, metadata bị sửa bên ngoài, vector sai chiều, nguồn trong prompt và bằng chứng đáp án.
+- **27 kiểm thử bổ sung đạt**: dấu câu, chia không mất ký tự, giới hạn kích thước, lọc trước top-k, xóa nhiều chunk, metadata bị sửa bên ngoài, vector sai chiều, nguồn trong prompt và bằng chứng đáp án.
 - main.py với câu hỏi “Chunking là gì?” chạy thành công. Thông báo bỏ qua customer_support_playbook.txt là file mẫu thiếu sẵn, đã được Codelab ghi nhận.
-- bench.py chạy thành công; dữ liệu đầy đủ ở [benchmark.json](results/benchmark.json).
+- bench.py chạy thành công; dữ liệu đầy đủ ở [benchmark.json](benchmark.json).
 
 ## 4. Dự đoán độ tương tự
 
@@ -93,46 +92,32 @@ Dự đoán được lưu trong data/similarity_pairs.json trước khi chạy. 
 
 Cặp 2 cho thấy diễn đạt gần nghĩa vẫn có điểm âm. Mock dùng MD5 để sinh vector giả ngẫu nhiên, không học ý nghĩa. Chỉ chuỗi giống hệt mới bảo đảm cùng vector. Không dùng bảng này để kết luận về embedding thật.
 
-## 5. Kết quả truy xuất trên bộ đã chọn
+## 5. Kết quả truy xuất cá nhân
 
-Theo yêu cầu mới, dùng **UIT + Thư viện Trung tâm + KTX ĐHQG-HCM**, không dùng corpus VinUni trong lượt benchmark này. Có 7 bản tóm lược nguồn chính thức, 6 chủ đề và 5 câu hỏi mới trong data/uit-vnuhcm-queries.json. Danh mục và gold answer đầy đủ ở [báo cáo nhóm](REPORT_NHOM.md).
+Dùng HeadingChunker(300), top-k=3, tổng 11 chunk, độ dài trung bình 219,0. Bộ 5 câu hỏi trùng báo cáo nhóm và data/benchmark_queries.json. Q1 lọc audience=student.
 
-HeadingChunker(300), top-k=3: **23 chunk**, độ dài trung bình **221,1**. Q1 có bộ lọc audience=student. Các kết quả khác chỉ dùng câu hỏi, không tự thêm bộ lọc để nâng điểm.
+| Câu | Top-1 chunk | Score | Đủ bằng chứng top-1 / top-3 | Ngữ cảnh Agent demo |
+|---|---|---:|---|---|
+| Q1: hạn mức/thời hạn mượn | student-borrowing#0 | -0.1237 | Có / Có | Đúng đối tượng và có đáp án |
+| Q2: gia hạn sách sinh viên | faculty-borrowing#1 | 0.1299 | Không / Không | Nhầm ngữ cảnh giảng viên |
+| Q3: đến muộn đặt phòng | faculty-borrowing#0 | 0.1140 | Không / Không | Thiếu đoạn về hủy phòng |
+| Q4: đối tượng dùng khu 24/7 | room-booking#0 | 0.1587 | Không / Không | Có đúng file ở top-3 nhưng sai mục |
+| Q5: thời hạn gửi Course Reserve | faculty-borrowing#1 | 0.1588 | Không / Có | Có đáp án trong course-reserve#2 ở hạng 2 |
 
-| Câu | Câu hỏi | Top-1 | Score | Đủ bằng chứng top-1 / top-3 |
-|---|---|---|---:|---|
-| Q1 | Ở UIT, tôi cần làm gì để yêu cầu phúc khảo và nhận kết quả bằng cách nào? | ktx-gia-han-2026-2027#2 | 0.2239 | Không / Không |
-| Q2 | Hạn đóng học phí học kỳ hè 2025-2026 của UIT là ngày nào? | uit-dang-ky-hoc-phan#2 | 0.3882 | Không / Không |
-| Q3 | Theo quy định UIT Global có hiệu lực từ 01/09/2026, sinh viên được nộp chứng chỉ xét học bổng trong những học kỳ nào? | ktx-gia-han-2026-2027#0 | 0.2712 | Không / Có |
-| Q4 | Sinh viên chính quy thuộc ĐHQG-HCM được mượn bao nhiêu tài liệu tại Thư viện Trung tâm, trong bao lâu và gia hạn thế nào? | uit-dang-ky-hoc-phan#0 | 0.2662 | Không / Không |
-| Q5 | Sinh viên đang ở KTX ĐHQG-HCM gia hạn năm 2026-2027 phải thanh toán trong bao lâu sau khi hồ sơ được duyệt? | uit-hoc-bong-global-2026#0 | 0.2279 | Không / Có |
+**Đủ cụm bằng chứng top-3: 2/5; có đúng doc_id top-3: 3/5.** Top-3 đầy đủ cho mọi câu nằm trong [bảng kết quả](benchmark.md).
 
-**Đúng nguồn top-3: 2/5. Đủ bằng chứng top-3: 2/5** (Q3 học bổng và Q5 KTX). Không có câu nào đủ bằng chứng ở top-1 trong cấu hình này. Agent demo trích chính các chunk; không phải câu trả lời được LLM tổng hợp hoặc chấm đúng/sai tự động.
+Agent hiện chỉ trích ngữ cảnh bằng extractive_demo, không tổng hợp đáp án bằng LLM thật. Vì vậy chưa chấm tiêu chí “agent trả lời đúng” theo rubric. Điểm âm ở Q1 không chứng minh dữ liệu sai: bộ lọc đã chọn đúng tài liệu, còn score mock không mang ngữ nghĩa.
 
-### Bằng chứng trong corpus trước khi tìm kiếm
+## 6. Phân tích lỗi và bài học
 
-Các chunk heading có thông tin để trả lời (không có nghĩa chúng đã được retrieve):
+**Lỗi Q4:** heading lấy hours-access#0 nói về lịch mở cửa, nhưng đáp án nằm ở mục Không gian 24/7 trong #1. Chỉ chấm doc_id sẽ báo đạt sai. Cần kiểm bằng chứng và đọc câu trả lời LLM khi có mô hình thật.
 
-- Q1: uit-phuc-khao-sinh-vien#0, uit-phuc-khao-sinh-vien#1.
-- Q2: uit-hoc-phi-he-2025-2026#1.
-- Q3: uit-hoc-bong-global-2026#2.
-- Q4: vnulib-muon-tra#1.
-- Q5: ktx-gia-han-2026-2027#2.
+**Bộ lọc Q1:** không lọc thì heading trả top-1 faculty-borrowing#1, không đúng đối tượng. Lọc student lấy được mục hạn mức. Đây là tác dụng xác định tập ứng viên, không phải mock hiểu câu hỏi.
 
-Q1 cần nhiều đoạn để đủ quy trình; việc chỉ lấy đoạn về kết quả sẽ thiếu cách gửi yêu cầu. Xem [benchmark.md](results/benchmark.md) và [benchmark.json](results/benchmark.json) để đối chiếu các đoạn thực tế.
+**Cải thiện:** chạy LocalEmbedder đa ngữ trên bộ câu hỏi giữ nguyên; phân tích lỗi theo mục; thử kích thước/overlap, lấy mục lân cận hoặc reranker. Không tăng top-k tùy tiện để che lỗi mà không đo lại nhiễu.
 
-## 6. Phân tích lỗi
-
-**Q1:** metadata student loại được quy trình faculty khỏi top-3 của heading, nhưng top-3 còn lại vẫn thuộc KTX/học bổng. Bộ lọc đúng đối tượng không thay thế việc hiểu câu hỏi. Không tuyên bố bộ lọc làm câu trả lời đúng trong lần chạy này.
-
-**Q3 với fixed size:** đúng nguồn học bổng trong top-3 nhưng sai đoạn; thiếu những mốc cần cho gold answer. Đây là trường hợp source hit thổi phồng kết quả so với evidence hit.
-
-**Q2:** cần giữ chính xác kỳ hè 2025-2026 khi hỏi hạn học phí. Metadata university/institution/category và academic_year giúp nhận diện phạm vi. Không dùng ngày lấy nguồn như ngày hiệu lực.
-
-**Cải thiện:** dùng LocalEmbedder đa ngữ rồi chạy lại cùng bộ dữ liệu; kiểm tra ngữ cảnh và cân nhắc lọc category theo yêu cầu hoặc lấy mục lân cận. Không đổi câu hỏi theo score của mock để tạo kết quả đẹp. Các cặp cosine phần 4 giữ nguyên để có đối chiếu giữa hai corpus; chúng không phụ thuộc vào corpus.
-
-**Điều học từ thành viên/nhóm khác:** người học bổ sung sau hoạt động thật; phiên này chỉ có thực nghiệm tự động.
+**Điều học từ thành viên hoặc nhóm khác:** người học bổ sung sau buổi trao đổi thật. Không suy diễn từ thực nghiệm tự động.
 
 ## 7. Tự đánh giá
 
-Đã có code, kiểm thử, bộ dữ liệu đã chọn, benchmark mới và phân tích lỗi. Không tự gán điểm cho chất lượng mô hình thật hay hoạt động nhóm chưa diễn ra. Hướng dẫn chạy tại [GIAI_THICH.md](../GIAI_THICH.md); kết quả VinUni cũ giữ riêng trong archive/vinuni để truy vết thay đổi.
+Đã có code, giải thích, kiểm thử, benchmark và phân tích lỗi. Chưa tự gán điểm vì phần hiểu bài, hoạt động nhóm và chất lượng trả lời của LLM thật cần được xác nhận riêng.

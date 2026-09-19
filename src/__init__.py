@@ -18,10 +18,16 @@ from .embeddings import (
     _mock_embed,
 )
 from .models import Document
+from .heading import HeadingChunker
+from .ingestion import chunk_documents, load_corpus, load_markdown
 from .store import EmbeddingStore
 
 __all__ = [
     "Document",
+    "HeadingChunker",
+    "load_markdown",
+    "load_corpus",
+    "chunk_documents",
     "FixedSizeChunker",
     "SentenceChunker",
     "RecursiveChunker",

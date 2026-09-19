@@ -1,5 +1,7 @@
 # K4-L3A — Ngày 7: Nền Tảng Dữ Liệu, Embedding & Vector Store
 
+> **Bản đã hoàn thiện:** xem [giải thích và cách chạy trên Windows](GIAI_THICH.md), [báo cáo cá nhân](report/REPORT_CANHAN.md), [báo cáo nhóm](report/REPORT_NHOM.md) và [kết quả benchmark](report/results/benchmark.md). Chạy `python bench.py` để thử bộ **UIT + Thư viện Trung tâm + KTX ĐHQG-HCM** do người dùng chọn; mặc định dùng mock, không cần API key. Có thể đổi bộ bằng `--corpus-dir` và `--queries`.
+
 > Bản K4-L3A của Lab 07 (chủ đề: dịch vụ/quy định đại học). Hướng dẫn Codelabs để tải lên nằm tại `../codelabs/day7-lab-data-foundations.md`; yêu cầu Giai đoạn 2 riêng xem [K4_VARIANT.md](K4_VARIANT.md). Lớp song song L3B dùng cùng bài học nhưng crawl chủ đề thương mại điện tử.
 
 ---

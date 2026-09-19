@@ -1,0 +1,48 @@
+[
+  {
+    "id": "Q1",
+    "question": "Tôi được mượn bao nhiêu tài liệu và trong bao lâu?",
+    "user_context": "Sinh viên bậc đại học; đối tượng được truyền qua metadata, không thêm vào câu hỏi.",
+    "metadata_filter": {"audience": "student"},
+    "gold_doc_id": "student-borrowing",
+    "gold_section": "Hạn mức và thời hạn",
+    "gold_answer": "Sinh viên bậc đại học: tối đa 3 tài liệu, 2 tuần cho mỗi tài liệu.",
+    "evidence_phrases": ["3 tài liệu", "2 tuần"]
+  },
+  {
+    "id": "Q2",
+    "question": "Sinh viên đại học được gia hạn sách mấy lần, thêm bao lâu và cần điều kiện gì?",
+    "metadata_filter": null,
+    "gold_doc_id": "student-borrowing",
+    "gold_section": "Gia hạn sách",
+    "gold_answer": "Gia hạn 1 lần, thêm 1 tuần; sách chưa quá hạn và không có người khác yêu cầu mượn.",
+    "evidence_phrases": ["1 lần", "1 tuần", "chưa quá hạn", "không có người khác"]
+  },
+  {
+    "id": "Q3",
+    "question": "Nhóm đến muộn bao nhiêu phút thì bị hủy lượt đặt phòng?",
+    "metadata_filter": null,
+    "gold_doc_id": "room-booking",
+    "gold_section": "Đặt trước và đến muộn",
+    "gold_answer": "Không xuất hiện trong 10 phút đầu thì lượt đặt bị hủy.",
+    "evidence_phrases": ["10 phút đầu", "bị hủy"]
+  },
+  {
+    "id": "Q4",
+    "question": "Ai được vào khu học tập 24/7 sau khi thư viện đóng cửa?",
+    "metadata_filter": null,
+    "gold_doc_id": "hours-access",
+    "gold_section": "Không gian 24/7",
+    "gold_answer": "Sinh viên, giảng viên và nhân viên VinUni đang hoạt động.",
+    "evidence_phrases": ["sinh viên, giảng viên và nhân viên", "đang hoạt động"]
+  },
+  {
+    "id": "Q5",
+    "question": "Giảng viên phải gửi biểu mẫu Course Reserve trước khi học phần bắt đầu bao lâu?",
+    "metadata_filter": null,
+    "gold_doc_id": "course-reserve",
+    "gold_section": "Thời hạn gửi biểu mẫu",
+    "gold_answer": "Ít nhất 8 tuần trước khi học phần bắt đầu.",
+    "evidence_phrases": ["ít nhất 8 tuần"]
+  }
+]
